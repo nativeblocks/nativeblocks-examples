@@ -1,0 +1,388 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "schema-version": "2024-11-21 19:44",
+  "type": "object",
+  "required": [
+    "name",
+    "route",
+    "isStarter",
+    "type",
+    "variables",
+    "blocks"
+  ],
+  "properties": {
+    "blocks": {
+      "items": {
+        "$ref": "#/definitions/block"
+      },
+      "maxItems": 1,
+      "type": "array"
+    },
+    "isStarter": {
+      "type": "boolean"
+    },
+    "name": {
+      "type": "string"
+    },
+    "route": {
+      "type": "string"
+    },
+    "type": {
+      "enum": [
+        "FRAME",
+        "BOTTOM_SHEET",
+        "DIALOG"
+      ],
+      "type": "string"
+    },
+    "variables": {
+      "items": {
+        "properties": {
+          "key": {
+            "type": "string"
+          },
+          "type": {
+            "enum": [
+              "STRING",
+              "INT",
+              "LONG",
+              "DOUBLE",
+              "FLOAT",
+              "BOOLEAN"
+            ],
+            "type": "string"
+          },
+          "value": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "key",
+          "value",
+          "type"
+        ],
+        "type": "object"
+      },
+      "type": "array",
+      "uniqueItems": true
+    }
+  },
+  "definitions": {
+    "block": {
+      "properties": {
+        "actions": {
+          "items": {
+            "properties": {
+              "event": {
+                "enum": [
+                  "onAppear",
+                  "onDisappear",
+                  "onClick",
+                  "onTextChange",
+                  "onItemSelect"
+                ],
+                "type": "string"
+              },
+              "triggers": {
+                "items": {
+                  "$ref": "#/definitions/trigger"
+                },
+                "type": "array"
+              }
+            },
+            "required": [
+              "event",
+              "triggers"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "blocks": {
+          "items": {
+            "$ref": "#/definitions/block"
+          },
+          "type": "array"
+        },
+        "data": {
+          "items": {
+            "properties": {
+              "key": {
+                "enum": [
+                  "text",
+                  "placeholder",
+                  "label",
+                  "enable",
+                  "readOnly",
+                  "imageUrl",
+                  "contentDescription"
+                ],
+                "type": "string"
+              },
+              "type": {
+                "enum": [
+                  "STRING",
+                  "INT",
+                  "LONG",
+                  "DOUBLE",
+                  "FLOAT",
+                  "BOOLEAN"
+                ],
+                "type": "string"
+              },
+              "value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "key",
+              "value",
+              "type"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "integrationVersion": {
+          "type": "integer"
+        },
+        "key": {
+          "type": "string"
+        },
+        "keyType": {
+          "enum": [
+            "ROOT",
+            "COLUMN",
+            "SPACER",
+            "TEXT_FIELD",
+            "BUTTON",
+            "IMAGE",
+            "TEXT",
+            "BOX",
+            "ROW"
+          ],
+          "type": "string"
+        },
+        "properties": {
+          "items": {
+            "properties": {
+              "key": {
+                "enum": [
+                  "direction",
+                  "paddingTop",
+                  "paddingStart",
+                  "paddingEnd",
+                  "paddingBottom",
+                  "background",
+                  "horizontalAlignment",
+                  "verticalArrangement",
+                  "width",
+                  "height",
+                  "radiusTopStart",
+                  "radiusTopEnd",
+                  "radiusBottomStart",
+                  "radiusBottomEnd",
+                  "maxLines",
+                  "contentColor",
+                  "disabledContentColor",
+                  "backgroundColor",
+                  "disableBackgroundColor",
+                  "borderColor",
+                  "disableBorderColor",
+                  "borderFocusColor",
+                  "shadow",
+                  "fontSize",
+                  "fontFamily",
+                  "textAlign",
+                  "fontWeight",
+                  "letterSpacing",
+                  "keyboardType",
+                  "contentPaddingStart",
+                  "contentPaddingTop",
+                  "contentPaddingEnd",
+                  "contentPaddingBottom",
+                  "scaleType",
+                  "overflow",
+                  "minLines",
+                  "textColor",
+                  "verticalAlignment",
+                  "horizontalArrangement"
+                ],
+                "type": "string"
+              },
+              "type": {
+                "enum": [
+                  "STRING",
+                  "INT",
+                  "LONG",
+                  "DOUBLE",
+                  "FLOAT",
+                  "BOOLEAN"
+                ],
+                "type": "string"
+              },
+              "valueDesktop": {
+                "type": "string"
+              },
+              "valueMobile": {
+                "type": "string"
+              },
+              "valueTablet": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "key",
+              "valueMobile",
+              "valueTablet",
+              "valueDesktop",
+              "type"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "slot": {
+          "type": "string"
+        },
+        "slots": {
+          "items": {
+            "properties": {
+              "slot": {
+                "enum": [
+                  "content",
+                  "onLeadingIcon",
+                  "onTrailingIcon"
+                ],
+                "type": "string"
+              }
+            },
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "visibilityKey": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "keyType",
+        "key",
+        "visibilityKey",
+        "slot",
+        "slots",
+        "integrationVersion",
+        "data",
+        "properties",
+        "actions",
+        "blocks"
+      ],
+      "type": "object"
+    },
+    "trigger": {
+      "properties": {
+        "data": {
+          "items": {
+            "properties": {
+              "key": {
+                "enum": [],
+                "type": "string"
+              },
+              "type": {
+                "enum": [
+                  "STRING",
+                  "INT",
+                  "LONG",
+                  "DOUBLE",
+                  "FLOAT",
+                  "BOOLEAN"
+                ],
+                "type": "string"
+              },
+              "value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "key",
+              "value",
+              "type"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "integrationVersion": {
+          "type": "integer"
+        },
+        "keyType": {
+          "enum": [
+            "OFFER_LIST"
+          ],
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "properties": {
+          "items": {
+            "properties": {
+              "key": {
+                "enum": [
+                  "endpoint"
+                ],
+                "type": "string"
+              },
+              "type": {
+                "enum": [
+                  "STRING",
+                  "INT",
+                  "LONG",
+                  "DOUBLE",
+                  "FLOAT",
+                  "BOOLEAN"
+                ],
+                "type": "string"
+              },
+              "value": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "key",
+              "value",
+              "type"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "then": {
+          "enum": [
+            "NEXT",
+            "END",
+            "SUCCESS",
+            "FAILURE"
+          ],
+          "type": "string"
+        },
+        "triggers": {
+          "items": {
+            "$ref": "#/definitions/trigger"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "keyType",
+        "then",
+        "name",
+        "integrationVersion",
+        "properties",
+        "data",
+        "triggers"
+      ],
+      "type": "object"
+    }
+  }
+}
