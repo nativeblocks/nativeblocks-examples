@@ -1,4 +1,5 @@
 FROM node:20.18.0-alpine3.19
+ENV NODE_ENV=PRODUCTION
 
 RUN apk add --no-cache curl bash unzip
 
@@ -24,4 +25,4 @@ WORKDIR /app
 COPY package.json yarn.lock ./
 RUN yarn install --frozen-lockfile
 COPY . .
-CMD ["node", "src/app.js"]
+CMD ["yarn", "prod"]

@@ -1,0 +1,735 @@
+{
+  "BOX": {
+    "data": [],
+    "events": [
+      {
+        "event": "onClick"
+      }
+    ],
+    "keyType": "BOX",
+    "properties": [
+      {
+        "key": "width",
+        "value": "wrap",
+        "type": "STRING"
+      },
+      {
+        "key": "height",
+        "value": "wrap",
+        "type": "STRING"
+      },
+      {
+        "key": "paddingStart",
+        "value": "8.0",
+        "type": "DOUBLE"
+      },
+      {
+        "key": "paddingTop",
+        "value": "8.0",
+        "type": "DOUBLE"
+      },
+      {
+        "key": "paddingEnd",
+        "value": "8.0",
+        "type": "DOUBLE"
+      },
+      {
+        "key": "paddingBottom",
+        "value": "8.0",
+        "type": "DOUBLE"
+      },
+      {
+        "key": "background",
+        "value": "#ffffffff",
+        "type": "STRING"
+      },
+      {
+        "key": "direction",
+        "value": "LTR",
+        "type": "STRING"
+      },
+      {
+        "key": "verticalAlignment",
+        "value": "center",
+        "type": "STRING"
+      }
+    ],
+    "slots": [
+      {
+        "slot": "content"
+      }
+    ],
+    "version": 4
+  },
+  "BUTTON": {
+    "data": [
+      {
+        "key": "text",
+        "type": "STRING"
+      },
+      {
+        "key": "enable",
+        "type": "BOOLEAN"
+      }
+    ],
+    "events": [
+      {
+        "event": "onClick"
+      }
+    ],
+    "keyType": "BUTTON",
+    "properties": [
+      {
+        "key": "width",
+        "value": "wrap",
+        "type": "STRING"
+      },
+      {
+        "key": "height",
+        "value": "wrap",
+        "type": "STRING"
+      },
+      {
+        "key": "contentColor",
+        "value": "#FFFFFFFF",
+        "type": "STRING"
+      },
+      {
+        "key": "disabledContentColor",
+        "value": "#FFFFFFB2",
+        "type": "STRING"
+      },
+      {
+        "key": "backgroundColor",
+        "value": "#FF212121",
+        "type": "STRING"
+      },
+      {
+        "key": "disableBackgroundColor",
+        "value": "#212121B2",
+        "type": "STRING"
+      },
+      {
+        "key": "borderColor",
+        "value": "#FF212121",
+        "type": "STRING"
+      },
+      {
+        "key": "disableBorderColor",
+        "value": "#212121B2",
+        "type": "STRING"
+      },
+      {
+        "key": "paddingStart",
+        "value": "4.0",
+        "type": "DOUBLE"
+      },
+      {
+        "key": "paddingTop",
+        "value": "4.0",
+        "type": "DOUBLE"
+      },
+      {
+        "key": "paddingEnd",
+        "value": "4.0",
+        "type": "DOUBLE"
+      },
+      {
+        "key": "paddingBottom",
+        "value": "4.0",
+        "type": "DOUBLE"
+      },
+      {
+        "key": "contentPaddingStart",
+        "value": "4.0",
+        "type": "DOUBLE"
+      },
+      {
+        "key": "contentPaddingTop",
+        "value": "4.0",
+        "type": "DOUBLE"
+      },
+      {
+        "key": "contentPaddingEnd",
+        "value": "4.0",
+        "type": "DOUBLE"
+      },
+      {
+        "key": "contentPaddingBottom",
+        "value": "4.0",
+        "type": "DOUBLE"
+      },
+      {
+        "key": "radiusTopStart",
+        "value": "4.0",
+        "type": "DOUBLE"
+      },
+      {
+        "key": "radiusTopEnd",
+        "value": "4.0",
+        "type": "DOUBLE"
+      },
+      {
+        "key": "radiusBottomStart",
+        "value": "4.0",
+        "type": "DOUBLE"
+      },
+      {
+        "key": "radiusBottomEnd",
+        "value": "4.0",
+        "type": "DOUBLE"
+      },
+      {
+        "key": "fontSize",
+        "value": "14.0",
+        "type": "DOUBLE"
+      },
+      {
+        "key": "fontFamily",
+        "value": "default",
+        "type": "STRING"
+      },
+      {
+        "key": "textAlign",
+        "value": "start",
+        "type": "STRING"
+      },
+      {
+        "key": "fontWeight",
+        "value": "normal",
+        "type": "STRING"
+      }
+    ],
+    "slots": [
+      {
+        "slot": "onLeadingIcon"
+      },
+      {
+        "slot": "onTrailingIcon"
+      }
+    ],
+    "version": 5
+  },
+  "COLUMN": {
+    "data": [],
+    "events": [
+      {
+        "event": "onClick"
+      }
+    ],
+    "keyType": "COLUMN",
+    "properties": [
+      {
+        "key": "verticalArrangement",
+        "value": "top",
+        "type": "STRING"
+      },
+      {
+        "key": "horizontalAlignment",
+        "value": "top",
+        "type": "STRING"
+      },
+      {
+        "key": "width",
+        "value": "wrap",
+        "type": "STRING"
+      },
+      {
+        "key": "height",
+        "value": "wrap",
+        "type": "STRING"
+      },
+      {
+        "key": "paddingStart",
+        "value": "8.0",
+        "type": "DOUBLE"
+      },
+      {
+        "key": "paddingTop",
+        "value": "8.0",
+        "type": "DOUBLE"
+      },
+      {
+        "key": "paddingEnd",
+        "value": "8.0",
+        "type": "DOUBLE"
+      },
+      {
+        "key": "paddingBottom",
+        "value": "8.0",
+        "type": "DOUBLE"
+      },
+      {
+        "key": "background",
+        "value": "#ffffffff",
+        "type": "STRING"
+      },
+      {
+        "key": "direction",
+        "value": "LTR",
+        "type": "STRING"
+      },
+      {
+        "key": "radiusTopStart",
+        "value": "4.0",
+        "type": "DOUBLE"
+      },
+      {
+        "key": "radiusTopEnd",
+        "value": "4.0",
+        "type": "DOUBLE"
+      },
+      {
+        "key": "radiusBottomStart",
+        "value": "4.0",
+        "type": "DOUBLE"
+      },
+      {
+        "key": "radiusBottomEnd",
+        "value": "4.0",
+        "type": "DOUBLE"
+      }
+    ],
+    "slots": [
+      {
+        "slot": "content"
+      }
+    ],
+    "version": 4
+  },
+  "IMAGE": {
+    "data": [
+      {
+        "key": "imageUrl",
+        "type": "STRING"
+      },
+      {
+        "key": "contentDescription",
+        "type": "STRING"
+      }
+    ],
+    "events": [],
+    "keyType": "IMAGE",
+    "properties": [
+      {
+        "key": "width",
+        "value": "wrap",
+        "type": "STRING"
+      },
+      {
+        "key": "height",
+        "value": "wrap",
+        "type": "STRING"
+      },
+      {
+        "key": "radiusTopStart",
+        "value": "4.0",
+        "type": "DOUBLE"
+      },
+      {
+        "key": "radiusTopEnd",
+        "value": "4.0",
+        "type": "DOUBLE"
+      },
+      {
+        "key": "radiusBottomStart",
+        "value": "4.0",
+        "type": "DOUBLE"
+      },
+      {
+        "key": "radiusBottomEnd",
+        "value": "4.0",
+        "type": "DOUBLE"
+      },
+      {
+        "key": "scaleType",
+        "value": "none",
+        "type": "STRING"
+      }
+    ],
+    "slots": [],
+    "version": 3
+  },
+  "ROOT": {
+    "data": [],
+    "events": [
+      {
+        "event": "onAppear"
+      },
+      {
+        "event": "onDisappear"
+      }
+    ],
+    "keyType": "ROOT",
+    "properties": [
+      {
+        "key": "direction",
+        "value": "LTR",
+        "type": "STRING"
+      },
+      {
+        "key": "paddingTop",
+        "value": "8",
+        "type": "INT"
+      },
+      {
+        "key": "paddingStart",
+        "value": "8",
+        "type": "INT"
+      },
+      {
+        "key": "paddingEnd",
+        "value": "8",
+        "type": "INT"
+      },
+      {
+        "key": "paddingBottom",
+        "value": "8",
+        "type": "INT"
+      },
+      {
+        "key": "background",
+        "value": "#ffffff",
+        "type": "STRING"
+      },
+      {
+        "key": "horizontalAlignment",
+        "value": "top",
+        "type": "STRING"
+      },
+      {
+        "key": "verticalArrangement",
+        "value": "top",
+        "type": "STRING"
+      }
+    ],
+    "slots": [
+      {
+        "slot": "content"
+      }
+    ],
+    "version": 4
+  },
+  "ROW": {
+    "data": [],
+    "events": [
+      {
+        "event": "onClick"
+      }
+    ],
+    "keyType": "ROW",
+    "properties": [
+      {
+        "key": "horizontalArrangement",
+        "value": "start",
+        "type": "STRING"
+      },
+      {
+        "key": "verticalAlignment",
+        "value": "top",
+        "type": "STRING"
+      },
+      {
+        "key": "width",
+        "value": "wrap",
+        "type": "STRING"
+      },
+      {
+        "key": "height",
+        "value": "wrap",
+        "type": "STRING"
+      },
+      {
+        "key": "paddingStart",
+        "value": "8.0",
+        "type": "DOUBLE"
+      },
+      {
+        "key": "paddingTop",
+        "value": "8.0",
+        "type": "DOUBLE"
+      },
+      {
+        "key": "paddingEnd",
+        "value": "8.0",
+        "type": "DOUBLE"
+      },
+      {
+        "key": "paddingBottom",
+        "value": "8.0",
+        "type": "DOUBLE"
+      },
+      {
+        "key": "background",
+        "value": "#ffffffff",
+        "type": "STRING"
+      },
+      {
+        "key": "direction",
+        "value": "LTR",
+        "type": "STRING"
+      }
+    ],
+    "slots": [
+      {
+        "slot": "content"
+      }
+    ],
+    "version": 4
+  },
+  "SPACER": {
+    "data": [],
+    "events": [],
+    "keyType": "SPACER",
+    "properties": [
+      {
+        "key": "width",
+        "value": "wrap",
+        "type": "STRING"
+      },
+      {
+        "key": "height",
+        "value": "wrap",
+        "type": "STRING"
+      }
+    ],
+    "slots": [],
+    "version": 2
+  },
+  "TEXT": {
+    "data": [
+      {
+        "key": "text",
+        "type": "STRING"
+      }
+    ],
+    "events": [],
+    "keyType": "TEXT",
+    "properties": [
+      {
+        "key": "fontWeight",
+        "value": "normal",
+        "type": "STRING"
+      },
+      {
+        "key": "overflow",
+        "value": "clip",
+        "type": "STRING"
+      },
+      {
+        "key": "minLines",
+        "value": "1",
+        "type": "INT"
+      },
+      {
+        "key": "maxLines",
+        "value": "9999",
+        "type": "INT"
+      },
+      {
+        "key": "width",
+        "value": "wrap",
+        "type": "STRING"
+      },
+      {
+        "key": "height",
+        "value": "wrap",
+        "type": "STRING"
+      },
+      {
+        "key": "fontFamily",
+        "value": "default",
+        "type": "STRING"
+      },
+      {
+        "key": "fontSize",
+        "value": "14.0",
+        "type": "DOUBLE"
+      },
+      {
+        "key": "textColor",
+        "value": "#ffffffff",
+        "type": "STRING"
+      },
+      {
+        "key": "textAlign",
+        "value": "start",
+        "type": "STRING"
+      }
+    ],
+    "slots": [],
+    "version": 3
+  },
+  "TEXT_FIELD": {
+    "data": [
+      {
+        "key": "text",
+        "type": "STRING"
+      },
+      {
+        "key": "placeholder",
+        "type": "STRING"
+      },
+      {
+        "key": "label",
+        "type": "STRING"
+      },
+      {
+        "key": "enable",
+        "type": "BOOLEAN"
+      },
+      {
+        "key": "readOnly",
+        "type": "BOOLEAN"
+      }
+    ],
+    "events": [
+      {
+        "event": "onTextChange"
+      }
+    ],
+    "keyType": "TEXT_FIELD",
+    "properties": [
+      {
+        "key": "maxLines",
+        "value": "100",
+        "type": "INT"
+      },
+      {
+        "key": "width",
+        "value": "wrap",
+        "type": "STRING"
+      },
+      {
+        "key": "height",
+        "value": "wrap",
+        "type": "STRING"
+      },
+      {
+        "key": "contentColor",
+        "value": "#FFFFFFFF",
+        "type": "STRING"
+      },
+      {
+        "key": "disabledContentColor",
+        "value": "#FFFFFFB2",
+        "type": "STRING"
+      },
+      {
+        "key": "backgroundColor",
+        "value": "#FF212121",
+        "type": "STRING"
+      },
+      {
+        "key": "disableBackgroundColor",
+        "value": "#212121B2",
+        "type": "STRING"
+      },
+      {
+        "key": "borderColor",
+        "value": "#FF212121",
+        "type": "STRING"
+      },
+      {
+        "key": "disableBorderColor",
+        "value": "#212121B2",
+        "type": "STRING"
+      },
+      {
+        "key": "borderFocusColor",
+        "value": "#FF212121",
+        "type": "STRING"
+      },
+      {
+        "key": "shadow",
+        "value": "1",
+        "type": "INT"
+      },
+      {
+        "key": "radiusTopStart",
+        "value": "4.0",
+        "type": "DOUBLE"
+      },
+      {
+        "key": "radiusTopEnd",
+        "value": "4.0",
+        "type": "DOUBLE"
+      },
+      {
+        "key": "radiusBottomStart",
+        "value": "4.0",
+        "type": "DOUBLE"
+      },
+      {
+        "key": "radiusBottomEnd",
+        "value": "4.0",
+        "type": "DOUBLE"
+      },
+      {
+        "key": "paddingStart",
+        "value": "4.0",
+        "type": "DOUBLE"
+      },
+      {
+        "key": "paddingTop",
+        "value": "4.0",
+        "type": "DOUBLE"
+      },
+      {
+        "key": "paddingEnd",
+        "value": "4.0",
+        "type": "DOUBLE"
+      },
+      {
+        "key": "paddingBottom",
+        "value": "4.0",
+        "type": "DOUBLE"
+      },
+      {
+        "key": "fontSize",
+        "value": "14.0",
+        "type": "DOUBLE"
+      },
+      {
+        "key": "fontFamily",
+        "value": "default",
+        "type": "STRING"
+      },
+      {
+        "key": "textAlign",
+        "value": "start",
+        "type": "STRING"
+      },
+      {
+        "key": "fontWeight",
+        "value": "normal",
+        "type": "STRING"
+      },
+      {
+        "key": "letterSpacing",
+        "value": "1.25",
+        "type": "DOUBLE"
+      },
+      {
+        "key": "direction",
+        "value": "LTR",
+        "type": "STRING"
+      },
+      {
+        "key": "keyboardType",
+        "value": "normal",
+        "type": "STRING"
+      }
+    ],
+    "slots": [
+      {
+        "slot": "onLeadingIcon"
+      },
+      {
+        "slot": "onTrailingIcon"
+      }
+    ],
+    "version": 5
+  },
+  "schema-version": "2024-11-21 21:39"
+}

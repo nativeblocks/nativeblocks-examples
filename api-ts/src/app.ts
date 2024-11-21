@@ -1,9 +1,9 @@
-const express = require('express');
+import express from "express";
+import getPaywallFrame from "./paywall";
+
 const app = express();
 
 app.use(express.json());
-
-const {getPaywallFrame} = require('./paywall');
 
 app.get('/', (req, res) => {
   res.send('Hello Nativeblocks!');

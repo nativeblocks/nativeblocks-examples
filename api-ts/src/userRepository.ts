@@ -12,18 +12,20 @@ function generateRandomName() {
   return `${randomFirstName} ${randomLastName}`;
 }
 
-const getUsers = async () => {
+type UserModel = { id: number, name: string }
+
+const getUsers: () => Promise<UserModel[]> = async () => {
   const users = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-  return new Promise((resolve, reject) => {
+  return new Promise<UserModel[]>((resolve, reject) => {
     resolve(
-      users.map(number => {
+      users.map(num => {
         return {
-          id: number,
+          id: num,
           name: generateRandomName(),
-        }
+        } as UserModel
       })
     );
   })
 }
 
-module.exports = {getUsers}
+export default {getUsers}

@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "schema-version": "2024-11-21 19:44",
+  "schema-version": "2024-11-21 21:39",
   "type": "object",
   "required": [
     "name",

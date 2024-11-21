@@ -1,0 +1,16 @@
+{
+  "OFFER_LIST": {
+    "data": [],
+    "events": [],
+    "keyType": "OFFER_LIST",
+    "properties": [
+      {
+        "key": "endpoint",
+        "value": "",
+        "type": "STRING"
+      }
+    ],
+    "version": 1
+  },
+  "schema-version": "2024-11-21 21:39"
+}

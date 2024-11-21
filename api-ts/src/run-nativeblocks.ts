@@ -1,16 +1,16 @@
-const {spawn} = require("child_process");
-const fs = require("fs");
-const os = require("os");
-const path = require("path");
+import {spawn} from "child_process"
+import * as fs from "node:fs";
+import * as os from "node:os";
+import * as path from "node:path";
 
-async function buildWithNativeblocks(frameData) {
+async function buildWithNativeblocks(frameData: any) {
   const tempFilePath = await createTempFile(frameData);
   const response = await runNativeblocksCommand(tempFilePath);
   fs.unlinkSync(tempFilePath);
   return response;
 }
 
-async function createTempFile(jsonData) {
+async function createTempFile(jsonData: any) {
   const tempDir = os.tmpdir();
   const tempFilePath = path.join(tempDir, `temp-${Date.now()}.json`);
 
@@ -18,7 +18,7 @@ async function createTempFile(jsonData) {
   return tempFilePath;
 }
 
-function runNativeblocksCommand(tempFilePath) {
+function runNativeblocksCommand(tempFilePath: string) {
   return new Promise((resolve, reject) => {
     const cliCommand = "nativeblocks";
     const args = ["frame", "gen", "-p", tempFilePath];
@@ -50,4 +50,4 @@ function runNativeblocksCommand(tempFilePath) {
   });
 }
 
-module.exports = buildWithNativeblocks;
+export default buildWithNativeblocks;
