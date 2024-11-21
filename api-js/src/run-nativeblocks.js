@@ -1,4 +1,22 @@
 const {spawn} = require("child_process");
+const fs = require("fs");
+const os = require("os");
+const path = require("path");
+
+async function buildWithNativeblocks(frameData) {
+  const tempFilePath = await createTempFile(frameData);
+  const response = await runNativeblocksCommand(tempFilePath);
+  fs.unlinkSync(tempFilePath);
+  return response;
+}
+
+async function createTempFile(jsonData) {
+  const tempDir = os.tmpdir();
+  const tempFilePath = path.join(tempDir, `temp-${Date.now()}.json`);
+
+  await fs.promises.writeFile(tempFilePath, JSON.stringify(jsonData, null, 2));
+  return tempFilePath;
+}
 
 function runNativeblocksCommand(tempFilePath) {
   return new Promise((resolve, reject) => {
@@ -13,7 +31,7 @@ function runNativeblocksCommand(tempFilePath) {
     });
 
     child.stderr.on("data", (data) => {
-      console.error(`Stderr: ${data}`);
+      console.error(`${data}`);
     });
 
     child.on("close", (code) => {
@@ -23,7 +41,7 @@ function runNativeblocksCommand(tempFilePath) {
           const jsonData = JSON.parse(outputData);
           resolve(jsonData);
         } catch (error) {
-          reject(new Error("Failed to parse JSON output: " + error.message));
+          reject(new Error("Failed to parse JSON output: " + outputData));
         }
       } else {
         reject(new Error(`Process exited with code ${code}`));
@@ -32,4 +50,4 @@ function runNativeblocksCommand(tempFilePath) {
   });
 }
 
-module.exports = {runNativeblocksCommand};
+module.exports = buildWithNativeblocks;
