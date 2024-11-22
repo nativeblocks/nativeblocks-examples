@@ -36,14 +36,14 @@ export class RowBlock {
   private actions: IAction[];
   private blocks: any[];
   private readonly slots: ISlot[];
-  private readonly visibilityKey?: string;
-  private readonly slot?: string;
+  private readonly visibilityKey: string;
+  private readonly slot: string;
   private readonly key: string;
 
   constructor(config: {
     key: string;
-    visibilityKey?: string;
-    slot?: string;
+    visibilityKey: string;
+    slot: string;
   } = {} as any) {
     this.keyType = "ROW";
     this.key = config.key;
@@ -102,10 +102,6 @@ export class RowBlock {
     return this;
   }
 
-  public getAction(event: string): IAction | undefined {
-    return this.actions.find((a) => a.event === event);
-  }
-
   public addBlock(block: any): this {
     if (!this.isValidBlock(block)) {
       throw new Error("Invalid block: Block must be an object with at least key and keyType");
@@ -114,26 +110,10 @@ export class RowBlock {
     return this;
   }
 
-  public getBlock(key: string): any {
-    return this.blocks.find((b) => b.key === key);
-  }
-
-  public getBlocks(): any[] {
-    return [...this.blocks];
-  }
-
   public modifyProperty(key: string, valueMobile: string, valueTablet: string, valueDesktop: string): this {
     const propIndex = this.properties.findIndex((p) => p.key === key);
     if (propIndex !== -1) {
       this.properties[propIndex] = { ...this.properties[propIndex], valueMobile, valueTablet, valueDesktop };
-    }
-    return this;
-  }
-
-  public assignData(key: string, value: any): this {
-    const dataIndex = this.data.findIndex((d) => d.key === key);
-    if (dataIndex !== -1) {
-      this.data[dataIndex] = { ...this.data[dataIndex], value };
     }
     return this;
   }

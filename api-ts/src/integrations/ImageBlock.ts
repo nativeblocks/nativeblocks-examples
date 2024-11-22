@@ -36,14 +36,14 @@ export class ImageBlock {
   private actions: IAction[];
   private blocks: any[];
   private readonly slots: ISlot[];
-  private readonly visibilityKey?: string;
-  private readonly slot?: string;
+  private readonly visibilityKey: string;
+  private readonly slot: string;
   private readonly key: string;
 
   constructor(config: {
     key: string;
-    visibilityKey?: string;
-    slot?: string;
+    visibilityKey: string;
+    slot: string;
   } = {} as any) {
     this.keyType = "IMAGE";
     this.key = config.key;
@@ -88,35 +88,6 @@ export class ImageBlock {
            typeof block === "object" &&
            block.key &&
            block.keyType;
-  }
-
-  public addAction(event: string, triggers: any[]): this {
-    if (!this.isValidEvent(event)) {
-      throw new Error(`Invalid event: ${event}. Must be one of: ${this.events.map((e) => e.event).join(", ")}`);
-    }
-    const action: IAction = { event, triggers };
-    this.actions.push(action);
-    return this;
-  }
-
-  public getAction(event: string): IAction | undefined {
-    return this.actions.find((a) => a.event === event);
-  }
-
-  public addBlock(block: any): this {
-    if (!this.isValidBlock(block)) {
-      throw new Error("Invalid block: Block must be an object with at least key and keyType");
-    }
-    this.blocks.push(block);
-    return this;
-  }
-
-  public getBlock(key: string): any {
-    return this.blocks.find((b) => b.key === key);
-  }
-
-  public getBlocks(): any[] {
-    return [...this.blocks];
   }
 
   public modifyProperty(key: string, valueMobile: string, valueTablet: string, valueDesktop: string): this {

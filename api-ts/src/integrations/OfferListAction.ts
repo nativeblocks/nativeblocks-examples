@@ -16,9 +16,9 @@ interface ITrigger {
   name: string;
   keyType: string;
   then: string;
-  properties?: IProperty[];
-  data?: IData[];
-  triggers?: ITrigger[];
+  properties: IProperty[];
+  data: IData[];
+  triggers: ITrigger[];
 }
 
 interface IEvent {
@@ -48,28 +48,15 @@ export class OfferListAction {
     this.data = [];
     this.events = [];
     const initialProperties: IProperty[] = [
-      { key: "endpoint", value: "", type: "STRING" },
+      {key: "endpoint", value: "", type: "STRING"},
     ];
     this.properties.push(...initialProperties);
-    const initialData: IData[] = [
-    ];
+    const initialData: IData[] = [];
     this.data.push(...initialData);
     const initialEvents: IEvent[] = [
-      { event: "END" },
+      {event: "END"},
     ];
     this.events.push(...initialEvents);
-  }
-
-  private isValidEvent(eventName: string): boolean {
-    return this.events.some((e) => e.event === eventName);
-  }
-
-  private isValidTrigger(trigger: ITrigger): boolean {
-    return Boolean(trigger &&
-           typeof trigger === "object" &&
-           trigger.name &&
-           trigger.keyType &&
-           trigger.then);
   }
 
   public addTrigger(trigger: ITrigger): this {
@@ -93,15 +80,7 @@ export class OfferListAction {
   public modifyProperty(key: string, value: string): this {
     const propIndex = this.properties.findIndex((p) => p.key === key);
     if (propIndex !== -1) {
-      this.properties[propIndex] = { ...this.properties[propIndex], value };
-    }
-    return this;
-  }
-
-  public assignData(key: string, value: any): this {
-    const dataIndex = this.data.findIndex((d) => d.key === key);
-    if (dataIndex !== -1) {
-      this.data[dataIndex] = { ...this.data[dataIndex], value };
+      this.properties[propIndex] = {...this.properties[propIndex], value};
     }
     return this;
   }
@@ -116,5 +95,17 @@ export class OfferListAction {
       properties: this.properties,
       integrationVersion: this.integrationVersion,
     };
+  }
+
+  private isValidEvent(eventName: string): boolean {
+    return this.events.some((e) => e.event === eventName);
+  }
+
+  private isValidTrigger(trigger: ITrigger): boolean {
+    return Boolean(trigger &&
+      typeof trigger === "object" &&
+      trigger.name &&
+      trigger.keyType &&
+      trigger.then);
   }
 }

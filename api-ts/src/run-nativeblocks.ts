@@ -20,18 +20,19 @@ async function createTempFile(jsonData: any) {
 
 function runNativeblocksCommand(tempFilePath: string) {
   return new Promise((resolve, reject) => {
-    const cliCommand = "nativeblocks";
+    const cliCommand = "/Users/alireza/Development/nativeblocks/desktop/nativeblocks-cli/./nativeblocks";
     const args = ["frame", "gen", "-p", tempFilePath];
 
     const child = spawn(cliCommand, args, {shell: true});
     let outputData = "";
+    let errorData = "";
 
     child.stdout.on("data", (data) => {
       outputData += data;
     });
 
     child.stderr.on("data", (data) => {
-      console.error(`${data}`);
+      errorData += data;
     });
 
     child.on("close", (code) => {
@@ -44,7 +45,13 @@ function runNativeblocksCommand(tempFilePath: string) {
           reject(new Error("Failed to parse JSON output: " + outputData));
         }
       } else {
-        reject(new Error(`Process exited with code ${code}`));
+        if (errorData.trim()) {
+          reject(new Error(errorData.trim()));
+        } else if (outputData.trim()) {
+          reject(new Error(outputData.trim()));
+        } else {
+          reject(new Error(`Process exited with code ${code} but no output.`));
+        }
       }
     });
   });
