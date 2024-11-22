@@ -2,6 +2,7 @@
 
 $router = new AltoRouter();
 
+$router->map('GET', '/', ['App\Controllers\HelloController', 'index']);
 $router->map('GET', '/paywall', ['App\Controllers\PaywallController', 'index']);
 
 $match = $router->match();

@@ -11,11 +11,11 @@ A Sample app to show, how to bind nativeblocks CLI with PHP app and compile DSL 
 ### Build docker image
 
 ```
- docker build -t api-ts .
+ docker build -t api-php .
  ```
 
 ### Run docker container
 
 ```
-docker run -it -p 9000:8080 api-ts
+docker run -it -p 9000:80 api-php
 ```
