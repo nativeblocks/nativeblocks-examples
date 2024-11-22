@@ -12,10 +12,12 @@ import io.nativeblocks.sampleapp.integration.consumer.action.SampleActionProvide
 import io.nativeblocks.sampleapp.integration.consumer.block.SampleBlockProvider
 
 private const val NATIVEBLOCKS_API_KEY = ""
-private const val NATIVEBLOCKS_API_URL = "https://edge.api.nativeblocks.io"
+private const val NATIVEBLOCKS_API_URL = "https://edge.api.nativeblocks.io/gateway"
 
 class MainActivity : ComponentActivity() {
 
+    // it can provide with DI
+    private val aiChatBot = AIChatBot()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,6 +30,9 @@ class MainActivity : ComponentActivity() {
                 developmentMode = true
             )
         )
+
+        SampleBlockProvider.provideBlocks()
+        SampleActionProvider.provideActions(aiChatBot)
 
         setContent {
             NativeblocksFrame(
