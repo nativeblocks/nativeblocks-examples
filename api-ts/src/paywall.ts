@@ -130,22 +130,13 @@ const getPaywallFrame = async () => {
         ])
         .addBlock(
           new ColumnBlock({
-            key: "root",
+            key: "col",
             visibilityKey: "col-visible",
             slot: "content",
           })
             .modifyProperty("width", "match", "match", "match")
             .modifyProperty("height", "match", "match", "match")
             .addBlock(button)
-            // .addBlock(
-            //   new RowBlock({
-            //       key: "row",
-            //       visibilityKey: "row_visible",
-            //       slot: "content",
-            //     }
-            //   )
-            //     .build()
-            // )
             .build()
         ).build()
     ],

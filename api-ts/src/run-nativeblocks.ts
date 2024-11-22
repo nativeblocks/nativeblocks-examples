@@ -20,7 +20,7 @@ async function createTempFile(jsonData: any) {
 
 function runNativeblocksCommand(tempFilePath: string) {
   return new Promise((resolve, reject) => {
-    const cliCommand = "/Users/alireza/Development/nativeblocks/desktop/nativeblocks-cli/./nativeblocks";
+    const cliCommand = "nativeblocks";
     const args = ["frame", "gen", "-p", tempFilePath];
 
     const child = spawn(cliCommand, args, {shell: true});

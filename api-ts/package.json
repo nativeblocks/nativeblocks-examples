@@ -12,8 +12,7 @@
   "scripts": {
     "prebuild": "tslint -c tslint.json -p tsconfig.json --fix",
     "build": "tsc",
-    "prestart": "yarn run build",
-    "start": "node dist/app.js",
+    "start": "nodemon src/app.ts",
     "prod": "yarn node dist/app.js"
   },
   "devDependencies": {
