@@ -1,6 +1,12 @@
 # API TS
 
-A Sample app to show, how to bind nativeblocks CLI with JS app and compile DSL through the nativeblocks-cli
+A Sample app to show, how to bind nativeblocks CLI with TS app and compile DSL through the nativeblocks-cli
+
+### Run app
+
+```
+ yarn start
+```
 
 ### Build docker image
 
