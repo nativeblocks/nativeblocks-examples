@@ -1,0 +1,42 @@
+{
+  "originHash" : "534a0cb84ec86440e34513ff990625ead79256db1eae8ca7a29208cacbed98c2",
+  "pins" : [
+    {
+      "identity" : "nativeblocks-compiler-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/nativeblocks/nativeblocks-compiler-ios",
+      "state" : {
+        "revision" : "4b2644b290df74b8d20a391a69db1d92d44e32de",
+        "version" : "1.0.0"
+      }
+    },
+    {
+      "identity" : "nativeblocks-foundation-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/nativeblocks/nativeblocks-foundation-ios",
+      "state" : {
+        "branch" : "main",
+        "revision" : "1dd29042e9c7dd1d93fcea25600acb8bd9e9cb5c"
+      }
+    },
+    {
+      "identity" : "nativeblocks-ios-sdk",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/nativeblocks/nativeblocks-ios-sdk",
+      "state" : {
+        "revision" : "582038758ff0f58c719caf270c6bd11f3fb5c98e",
+        "version" : "1.0.0"
+      }
+    },
+    {
+      "identity" : "swift-syntax",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-syntax.git",
+      "state" : {
+        "revision" : "64889f0c732f210a935a0ad7cda38f77f876262d",
+        "version" : "509.1.1"
+      }
+    }
+  ],
+  "version" : 3
+}
