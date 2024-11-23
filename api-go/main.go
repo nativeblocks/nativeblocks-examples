@@ -3,12 +3,13 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"github.com/nativeblocks/nativeblocks-example/api-go/app"
 	"log"
 	"net/http"
 )
 
 func paywallHandler(w http.ResponseWriter, r *http.Request) {
-	paywall, err := GetPaywallFrame()
+	paywall, err := app.GetPaywallFrame()
 	if err != nil {
 		log.Fatal(err)
 	}

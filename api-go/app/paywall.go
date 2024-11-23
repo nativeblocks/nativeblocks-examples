@@ -1,4 +1,4 @@
-package main
+package app
 
 import (
 	"fmt"
@@ -27,6 +27,11 @@ func GetPaywallFrame() (map[string]interface{}, error) {
 		"End-to-end encryption",
 		"Private Browser",
 		"No ads and no limits",
+	}
+
+	users, err := GetUsers()
+	if err != nil {
+		return nil, fmt.Errorf("failed to get users: %w", err)
 	}
 
 	variables := []Variable{
@@ -63,11 +68,18 @@ func GetPaywallFrame() (map[string]interface{}, error) {
 	button := integration.NewButtonBlock("BUTTON", "button_visible", "content")
 	button.ModifyProperty("width", "match", "match", "match")
 	button.ModifyProperty("height", "warp", "warp", "warp")
-	button.AssignData("text", "yearly_price")
-	button.AssignData("enable", "button_enable")
+
+	for _, user := range users {
+		if user.ID%2 == 0 || user.Country == "USA" {
+			button.AssignData("text", "yearly_price")
+		} else {
+			button.AssignData("text", "monthly_price")
+		}
+		button.AssignData("enable", "button_enable")
+	}
 
 	offerList := integration.NewOfferListAction("offerList", "END")
-	offerList.ModifyProperty("endpoint", "http://example.com")
+	offerList.ModifyProperty("endpoint", "https://example.com")
 	buttonTriggers := make([]interface{}, 0)
 	list := append(buttonTriggers, offerList.Build())
 	button.AddAction("onClick", list)
