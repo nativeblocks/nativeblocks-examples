@@ -1,5 +1,5 @@
 {
-  "originHash" : "5837444a6786f11a6060a204c75538314ea943a0e3fdba633e572e77dc43fcf9",
+  "originHash" : "416d14ef1822dbeaa9f232c360909d7f7322d48e7fa189318a0d3a67179a4dd7",
   "pins" : [
     {
       "identity" : "agorainfra_ios",
@@ -42,8 +42,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/nativeblocks/nativeblocks-foundation-ios",
       "state" : {
-        "branch" : "develop",
-        "revision" : "310b2b0e30e40b46cbf4de120a74e5a0cf482b1b"
+        "revision" : "83907278a6f663a6a977913d6a21488a70cf2d14",
+        "version" : "1.0.0"
       }
     },
     {
@@ -51,8 +51,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/nativeblocks/nativeblocks-ios-sdk",
       "state" : {
-        "branch" : "main",
-        "revision" : "f4490cc34662e5f9269d4b593c977959ed18e974"
+        "revision" : "f4490cc34662e5f9269d4b593c977959ed18e974",
+        "version" : "1.2.0"
       }
     },
     {

@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB0892242CFDB59D00B72507 /* NativeblocksFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = BB0892232CFDB59D00B72507 /* NativeblocksFoundation */; };
 		BB28BEDB2CFD87CD006A9ABC /* Nativeblocks in Frameworks */ = {isa = PBXBuildFile; productRef = BB28BEDA2CFD87CD006A9ABC /* Nativeblocks */; };
-		BB28BEDE2CFD88F7006A9ABC /* NativeblocksFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = BB28BEDD2CFD88F7006A9ABC /* NativeblocksFoundation */; };
 		BB28BEE12CFD894F006A9ABC /* NativeblocksCompiler in Frameworks */ = {isa = PBXBuildFile; productRef = BB28BEE02CFD894F006A9ABC /* NativeblocksCompiler */; };
 		BB28BF432CFD8CC0006A9ABC /* ReplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB390EC12CFCD19300A31926 /* ReplayKit.framework */; };
 		BB28BF4A2CFD8CC0006A9ABC /* ScreenSharingKit.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = BB28BF422CFD8CC0006A9ABC /* ScreenSharingKit.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -97,8 +97,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB28BEE12CFD894F006A9ABC /* NativeblocksCompiler in Frameworks */,
-				BB28BEDE2CFD88F7006A9ABC /* NativeblocksFoundation in Frameworks */,
 				BB67EE582CFDAFA2000E886D /* NativeblocksWandKit in Frameworks */,
+				BB0892242CFDB59D00B72507 /* NativeblocksFoundation in Frameworks */,
 				BB28BEDB2CFD87CD006A9ABC /* Nativeblocks in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -179,9 +179,9 @@
 			name = "ios-sample";
 			packageProductDependencies = (
 				BB28BEDA2CFD87CD006A9ABC /* Nativeblocks */,
-				BB28BEDD2CFD88F7006A9ABC /* NativeblocksFoundation */,
 				BB28BEE02CFD894F006A9ABC /* NativeblocksCompiler */,
 				BB67EE572CFDAFA2000E886D /* NativeblocksWandKit */,
+				BB0892232CFDB59D00B72507 /* NativeblocksFoundation */,
 			);
 			productName = "ios-sample";
 			productReference = BB2E1CCA2CF294DF005EAB87 /* ios-sample.app */;
@@ -216,9 +216,9 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				BB28BED92CFD87CD006A9ABC /* XCRemoteSwiftPackageReference "nativeblocks-ios-sdk" */,
-				BB28BEDC2CFD88F7006A9ABC /* XCRemoteSwiftPackageReference "nativeblocks-foundation-ios" */,
 				BB28BEDF2CFD894F006A9ABC /* XCRemoteSwiftPackageReference "nativeblocks-compiler-ios" */,
 				BB67EE562CFDAFA2000E886D /* XCRemoteSwiftPackageReference "nativeblocks-wandkit-ios-sdk" */,
+				BB0892222CFDB59D00B72507 /* XCRemoteSwiftPackageReference "nativeblocks-foundation-ios" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = BB2E1CCB2CF294DF005EAB87 /* Products */;
@@ -540,20 +540,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		BB0892222CFDB59D00B72507 /* XCRemoteSwiftPackageReference "nativeblocks-foundation-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nativeblocks/nativeblocks-foundation-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		BB28BED92CFD87CD006A9ABC /* XCRemoteSwiftPackageReference "nativeblocks-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/nativeblocks/nativeblocks-ios-sdk.git";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 1.2.0;
-			};
-		};
-		BB28BEDC2CFD88F7006A9ABC /* XCRemoteSwiftPackageReference "nativeblocks-foundation-ios" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/nativeblocks/nativeblocks-foundation-ios";
-			requirement = {
-				branch = develop;
-				kind = branch;
 			};
 		};
 		BB28BEDF2CFD894F006A9ABC /* XCRemoteSwiftPackageReference "nativeblocks-compiler-ios" */ = {
@@ -575,15 +575,15 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		BB0892232CFDB59D00B72507 /* NativeblocksFoundation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BB0892222CFDB59D00B72507 /* XCRemoteSwiftPackageReference "nativeblocks-foundation-ios" */;
+			productName = NativeblocksFoundation;
+		};
 		BB28BEDA2CFD87CD006A9ABC /* Nativeblocks */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = BB28BED92CFD87CD006A9ABC /* XCRemoteSwiftPackageReference "nativeblocks-ios-sdk" */;
 			productName = Nativeblocks;
-		};
-		BB28BEDD2CFD88F7006A9ABC /* NativeblocksFoundation */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = BB28BEDC2CFD88F7006A9ABC /* XCRemoteSwiftPackageReference "nativeblocks-foundation-ios" */;
-			productName = NativeblocksFoundation;
 		};
 		BB28BEE02CFD894F006A9ABC /* NativeblocksCompiler */ = {
 			isa = XCSwiftPackageProductDependency;
