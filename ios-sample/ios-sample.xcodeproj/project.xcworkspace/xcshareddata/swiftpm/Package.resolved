@@ -1,13 +1,40 @@
 {
-  "originHash" : "534a0cb84ec86440e34513ff990625ead79256db1eae8ca7a29208cacbed98c2",
+  "originHash" : "5837444a6786f11a6060a204c75538314ea943a0e3fdba633e572e77dc43fcf9",
   "pins" : [
+    {
+      "identity" : "agorainfra_ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/AgoraIO/AgoraInfra_iOS.git",
+      "state" : {
+        "revision" : "c2781d81a1ac78b94fefd53171975acb426b6ac5",
+        "version" : "1.2.13"
+      }
+    },
+    {
+      "identity" : "agorartcengine_ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/AgoraIO/AgoraRtcEngine_iOS.git",
+      "state" : {
+        "revision" : "26ecb3247b017cd17412b5e0922a049a0ac98815",
+        "version" : "4.5.0"
+      }
+    },
+    {
+      "identity" : "kingfisher",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/onevcat/Kingfisher.git",
+      "state" : {
+        "revision" : "b6256f191b4c1d8d09f4df94bae69e5ac6e42c81",
+        "version" : "8.1.1"
+      }
+    },
     {
       "identity" : "nativeblocks-compiler-ios",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/nativeblocks/nativeblocks-compiler-ios",
       "state" : {
-        "revision" : "4b2644b290df74b8d20a391a69db1d92d44e32de",
-        "version" : "1.0.0"
+        "revision" : "ec72766606abbefb2ecb439ffe80ec42b9415b19",
+        "version" : "1.1.0"
       }
     },
     {
@@ -15,8 +42,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/nativeblocks/nativeblocks-foundation-ios",
       "state" : {
-        "branch" : "main",
-        "revision" : "1dd29042e9c7dd1d93fcea25600acb8bd9e9cb5c"
+        "branch" : "develop",
+        "revision" : "310b2b0e30e40b46cbf4de120a74e5a0cf482b1b"
       }
     },
     {
@@ -24,7 +51,16 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/nativeblocks/nativeblocks-ios-sdk",
       "state" : {
-        "revision" : "582038758ff0f58c719caf270c6bd11f3fb5c98e",
+        "branch" : "main",
+        "revision" : "f4490cc34662e5f9269d4b593c977959ed18e974"
+      }
+    },
+    {
+      "identity" : "nativeblocks-wandkit-ios-sdk",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/nativeblocks/nativeblocks-wandkit-ios-sdk.git",
+      "state" : {
+        "revision" : "1b811c167da365ec61897d4ea454afaccf5719b8",
         "version" : "1.0.0"
       }
     },

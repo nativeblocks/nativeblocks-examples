@@ -7,33 +7,99 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BBE3A2AE2CF2952B004E30E5 /* NativeblocksCompiler in Frameworks */ = {isa = PBXBuildFile; productRef = BBE3A2AD2CF2952B004E30E5 /* NativeblocksCompiler */; };
-		BBE3A2B12CF29533004E30E5 /* NativeblocksFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = BBE3A2B02CF29533004E30E5 /* NativeblocksFoundation */; };
-		BBE3A2B52CF295B5004E30E5 /* NativeblocksFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = BBE3A2B42CF295B5004E30E5 /* NativeblocksFoundation */; };
-		BBE3A2B82CF295DC004E30E5 /* NativeblocksCompiler in Frameworks */ = {isa = PBXBuildFile; productRef = BBE3A2B72CF295DC004E30E5 /* NativeblocksCompiler */; };
+		BB28BEDB2CFD87CD006A9ABC /* Nativeblocks in Frameworks */ = {isa = PBXBuildFile; productRef = BB28BEDA2CFD87CD006A9ABC /* Nativeblocks */; };
+		BB28BEDE2CFD88F7006A9ABC /* NativeblocksFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = BB28BEDD2CFD88F7006A9ABC /* NativeblocksFoundation */; };
+		BB28BEE12CFD894F006A9ABC /* NativeblocksCompiler in Frameworks */ = {isa = PBXBuildFile; productRef = BB28BEE02CFD894F006A9ABC /* NativeblocksCompiler */; };
+		BB28BF432CFD8CC0006A9ABC /* ReplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB390EC12CFCD19300A31926 /* ReplayKit.framework */; };
+		BB28BF4A2CFD8CC0006A9ABC /* ScreenSharingKit.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = BB28BF422CFD8CC0006A9ABC /* ScreenSharingKit.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		BB67EE582CFDAFA2000E886D /* NativeblocksWandKit in Frameworks */ = {isa = PBXBuildFile; productRef = BB67EE572CFDAFA2000E886D /* NativeblocksWandKit */; };
+		BB67EE5A2CFDAFAA000E886D /* NativeblocksWandKit in Frameworks */ = {isa = PBXBuildFile; productRef = BB67EE592CFDAFAA000E886D /* NativeblocksWandKit */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		BB28BF482CFD8CC0006A9ABC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BB2E1CC22CF294DF005EAB87 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BB28BF412CFD8CC0006A9ABC;
+			remoteInfo = ScreenSharingKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BB390ECE2CFCD19300A31926 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				BB28BF4A2CFD8CC0006A9ABC /* ScreenSharingKit.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		BB28BF422CFD8CC0006A9ABC /* ScreenSharingKit.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ScreenSharingKit.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB2E1CCA2CF294DF005EAB87 /* ios-sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB390EC12CFCD19300A31926 /* ReplayKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReplayKit.framework; path = System/Library/Frameworks/ReplayKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		BB28BF4E2CFD8CC0006A9ABC /* Exceptions for "ScreenSharingKit" folder in "ScreenSharingKit" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = BB28BF412CFD8CC0006A9ABC /* ScreenSharingKit */;
+		};
+		BB390EE32CFCD29700A31926 /* Exceptions for "ios-sample" folder in "ios-sample" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = BB2E1CC92CF294DF005EAB87 /* ios-sample */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		BB28BF442CFD8CC0006A9ABC /* ScreenSharingKit */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				BB28BF4E2CFD8CC0006A9ABC /* Exceptions for "ScreenSharingKit" folder in "ScreenSharingKit" target */,
+			);
+			path = ScreenSharingKit;
+			sourceTree = "<group>";
+		};
 		BB2E1CCC2CF294DF005EAB87 /* ios-sample */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				BB390EE32CFCD29700A31926 /* Exceptions for "ios-sample" folder in "ios-sample" target */,
+			);
 			path = "ios-sample";
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		BB28BF3F2CFD8CC0006A9ABC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB67EE5A2CFDAFAA000E886D /* NativeblocksWandKit in Frameworks */,
+				BB28BF432CFD8CC0006A9ABC /* ReplayKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BB2E1CC72CF294DF005EAB87 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BBE3A2B82CF295DC004E30E5 /* NativeblocksCompiler in Frameworks */,
-				BBE3A2B52CF295B5004E30E5 /* NativeblocksFoundation in Frameworks */,
-				BBE3A2B12CF29533004E30E5 /* NativeblocksFoundation in Frameworks */,
-				BBE3A2AE2CF2952B004E30E5 /* NativeblocksCompiler in Frameworks */,
+				BB28BEE12CFD894F006A9ABC /* NativeblocksCompiler in Frameworks */,
+				BB28BEDE2CFD88F7006A9ABC /* NativeblocksFoundation in Frameworks */,
+				BB67EE582CFDAFA2000E886D /* NativeblocksWandKit in Frameworks */,
+				BB28BEDB2CFD87CD006A9ABC /* Nativeblocks in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +110,8 @@
 			isa = PBXGroup;
 			children = (
 				BB2E1CCC2CF294DF005EAB87 /* ios-sample */,
+				BB28BF442CFD8CC0006A9ABC /* ScreenSharingKit */,
+				BB390EC02CFCD19300A31926 /* Frameworks */,
 				BB2E1CCB2CF294DF005EAB87 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -52,13 +120,45 @@
 			isa = PBXGroup;
 			children = (
 				BB2E1CCA2CF294DF005EAB87 /* ios-sample.app */,
+				BB28BF422CFD8CC0006A9ABC /* ScreenSharingKit.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		BB390EC02CFCD19300A31926 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BB390EC12CFCD19300A31926 /* ReplayKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		BB28BF412CFD8CC0006A9ABC /* ScreenSharingKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB28BF4B2CFD8CC0006A9ABC /* Build configuration list for PBXNativeTarget "ScreenSharingKit" */;
+			buildPhases = (
+				BB28BF3E2CFD8CC0006A9ABC /* Sources */,
+				BB28BF3F2CFD8CC0006A9ABC /* Frameworks */,
+				BB28BF402CFD8CC0006A9ABC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				BB28BF442CFD8CC0006A9ABC /* ScreenSharingKit */,
+			);
+			name = ScreenSharingKit;
+			packageProductDependencies = (
+				BB67EE592CFDAFAA000E886D /* NativeblocksWandKit */,
+			);
+			productName = ScreenSharingKit;
+			productReference = BB28BF422CFD8CC0006A9ABC /* ScreenSharingKit.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		BB2E1CC92CF294DF005EAB87 /* ios-sample */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = BB2E1CD82CF294E0005EAB87 /* Build configuration list for PBXNativeTarget "ios-sample" */;
@@ -66,20 +166,22 @@
 				BB2E1CC62CF294DF005EAB87 /* Sources */,
 				BB2E1CC72CF294DF005EAB87 /* Frameworks */,
 				BB2E1CC82CF294DF005EAB87 /* Resources */,
+				BB390ECE2CFCD19300A31926 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				BB28BF492CFD8CC0006A9ABC /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				BB2E1CCC2CF294DF005EAB87 /* ios-sample */,
 			);
 			name = "ios-sample";
 			packageProductDependencies = (
-				BBE3A2AD2CF2952B004E30E5 /* NativeblocksCompiler */,
-				BBE3A2B02CF29533004E30E5 /* NativeblocksFoundation */,
-				BBE3A2B42CF295B5004E30E5 /* NativeblocksFoundation */,
-				BBE3A2B72CF295DC004E30E5 /* NativeblocksCompiler */,
+				BB28BEDA2CFD87CD006A9ABC /* Nativeblocks */,
+				BB28BEDD2CFD88F7006A9ABC /* NativeblocksFoundation */,
+				BB28BEE02CFD894F006A9ABC /* NativeblocksCompiler */,
+				BB67EE572CFDAFA2000E886D /* NativeblocksWandKit */,
 			);
 			productName = "ios-sample";
 			productReference = BB2E1CCA2CF294DF005EAB87 /* ios-sample.app */;
@@ -95,6 +197,9 @@
 				LastSwiftUpdateCheck = 1600;
 				LastUpgradeCheck = 1600;
 				TargetAttributes = {
+					BB28BF412CFD8CC0006A9ABC = {
+						CreatedOnToolsVersion = 16.0;
+					};
 					BB2E1CC92CF294DF005EAB87 = {
 						CreatedOnToolsVersion = 16.0;
 					};
@@ -110,9 +215,10 @@
 			mainGroup = BB2E1CC12CF294DF005EAB87;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				BBE3A2B22CF29544004E30E5 /* XCRemoteSwiftPackageReference "nativeblocks-ios-sdk" */,
-				BBE3A2B32CF295B5004E30E5 /* XCRemoteSwiftPackageReference "nativeblocks-foundation-ios" */,
-				BBE3A2B62CF295DC004E30E5 /* XCRemoteSwiftPackageReference "nativeblocks-compiler-ios" */,
+				BB28BED92CFD87CD006A9ABC /* XCRemoteSwiftPackageReference "nativeblocks-ios-sdk" */,
+				BB28BEDC2CFD88F7006A9ABC /* XCRemoteSwiftPackageReference "nativeblocks-foundation-ios" */,
+				BB28BEDF2CFD894F006A9ABC /* XCRemoteSwiftPackageReference "nativeblocks-compiler-ios" */,
+				BB67EE562CFDAFA2000E886D /* XCRemoteSwiftPackageReference "nativeblocks-wandkit-ios-sdk" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = BB2E1CCB2CF294DF005EAB87 /* Products */;
@@ -120,11 +226,19 @@
 			projectRoot = "";
 			targets = (
 				BB2E1CC92CF294DF005EAB87 /* ios-sample */,
+				BB28BF412CFD8CC0006A9ABC /* ScreenSharingKit */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		BB28BF402CFD8CC0006A9ABC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BB2E1CC82CF294DF005EAB87 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -135,6 +249,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		BB28BF3E2CFD8CC0006A9ABC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BB2E1CC62CF294DF005EAB87 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -144,7 +265,65 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		BB28BF492CFD8CC0006A9ABC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BB28BF412CFD8CC0006A9ABC /* ScreenSharingKit */;
+			targetProxy = BB28BF482CFD8CC0006A9ABC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		BB28BF4C2CFD8CC0006A9ABC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 67XY7R66VQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ScreenSharingKit/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ScreenSharingKit;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "io.nativeblocks.sampleapp.ios-sample.ScreenSharingKit";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BB28BF4D2CFD8CC0006A9ABC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 67XY7R66VQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ScreenSharingKit/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ScreenSharingKit;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "io.nativeblocks.sampleapp.ios-sample.ScreenSharingKit";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		BB2E1CD62CF294E0005EAB87 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -275,11 +454,14 @@
 				DEVELOPMENT_TEAM = 67XY7R66VQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "ios-sample/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Livekit need camera access for login";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,11 +486,14 @@
 				DEVELOPMENT_TEAM = 67XY7R66VQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "ios-sample/Info.plist";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Livekit need camera access for login";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -325,6 +510,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		BB28BF4B2CFD8CC0006A9ABC /* Build configuration list for PBXNativeTarget "ScreenSharingKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB28BF4C2CFD8CC0006A9ABC /* Debug */,
+				BB28BF4D2CFD8CC0006A9ABC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		BB2E1CC52CF294DF005EAB87 /* Build configuration list for PBXProject "ios-sample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -346,15 +540,15 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		BBE3A2B22CF29544004E30E5 /* XCRemoteSwiftPackageReference "nativeblocks-ios-sdk" */ = {
+		BB28BED92CFD87CD006A9ABC /* XCRemoteSwiftPackageReference "nativeblocks-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/nativeblocks/nativeblocks-ios-sdk";
+			repositoryURL = "https://github.com/nativeblocks/nativeblocks-ios-sdk.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
+				minimumVersion = 1.2.0;
 			};
 		};
-		BBE3A2B32CF295B5004E30E5 /* XCRemoteSwiftPackageReference "nativeblocks-foundation-ios" */ = {
+		BB28BEDC2CFD88F7006A9ABC /* XCRemoteSwiftPackageReference "nativeblocks-foundation-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/nativeblocks/nativeblocks-foundation-ios";
 			requirement = {
@@ -362,9 +556,17 @@
 				kind = branch;
 			};
 		};
-		BBE3A2B62CF295DC004E30E5 /* XCRemoteSwiftPackageReference "nativeblocks-compiler-ios" */ = {
+		BB28BEDF2CFD894F006A9ABC /* XCRemoteSwiftPackageReference "nativeblocks-compiler-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/nativeblocks/nativeblocks-compiler-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.0;
+			};
+		};
+		BB67EE562CFDAFA2000E886D /* XCRemoteSwiftPackageReference "nativeblocks-wandkit-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nativeblocks/nativeblocks-wandkit-ios-sdk.git";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 1.0.0;
@@ -373,23 +575,30 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		BBE3A2AD2CF2952B004E30E5 /* NativeblocksCompiler */ = {
+		BB28BEDA2CFD87CD006A9ABC /* Nativeblocks */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = NativeblocksCompiler;
+			package = BB28BED92CFD87CD006A9ABC /* XCRemoteSwiftPackageReference "nativeblocks-ios-sdk" */;
+			productName = Nativeblocks;
 		};
-		BBE3A2B02CF29533004E30E5 /* NativeblocksFoundation */ = {
+		BB28BEDD2CFD88F7006A9ABC /* NativeblocksFoundation */ = {
 			isa = XCSwiftPackageProductDependency;
+			package = BB28BEDC2CFD88F7006A9ABC /* XCRemoteSwiftPackageReference "nativeblocks-foundation-ios" */;
 			productName = NativeblocksFoundation;
 		};
-		BBE3A2B42CF295B5004E30E5 /* NativeblocksFoundation */ = {
+		BB28BEE02CFD894F006A9ABC /* NativeblocksCompiler */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = BBE3A2B32CF295B5004E30E5 /* XCRemoteSwiftPackageReference "nativeblocks-foundation-ios" */;
-			productName = NativeblocksFoundation;
-		};
-		BBE3A2B72CF295DC004E30E5 /* NativeblocksCompiler */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = BBE3A2B62CF295DC004E30E5 /* XCRemoteSwiftPackageReference "nativeblocks-compiler-ios" */;
+			package = BB28BEDF2CFD894F006A9ABC /* XCRemoteSwiftPackageReference "nativeblocks-compiler-ios" */;
 			productName = NativeblocksCompiler;
+		};
+		BB67EE572CFDAFA2000E886D /* NativeblocksWandKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BB67EE562CFDAFA2000E886D /* XCRemoteSwiftPackageReference "nativeblocks-wandkit-ios-sdk" */;
+			productName = NativeblocksWandKit;
+		};
+		BB67EE592CFDAFAA000E886D /* NativeblocksWandKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BB67EE562CFDAFA2000E886D /* XCRemoteSwiftPackageReference "nativeblocks-wandkit-ios-sdk" */;
+			productName = NativeblocksWandKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

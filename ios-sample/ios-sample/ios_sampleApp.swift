@@ -1,6 +1,7 @@
 import SwiftUI
 import Nativeblocks
 import NativeblocksFoundation
+import NativeblocksWandKit
 
 @main
 struct ios_sampleApp: App {
@@ -16,12 +17,19 @@ struct ios_sampleApp: App {
                 developmentMode: true
             )
         )
+        #if DEBUG
+            let bundleId = Bundle.main.bundleIdentifier ?? ""
+        _ = NativeblocksManager.getInstance().wandKit(
+                LiveKit(
+                    screenSharing: true,
+                    screenShareExtention: "\(bundleId).ScreenSharingKit",
+                    keepScreenOn: true,
+                    autoConnect: false
+                )
+            )
+        #endif
 
         NativeblocksFoundationBlockProvider.provideBlocks()
-        NativeblocksFoundationActionProvider.provideActions(
-            nativeChangeBlockProperty: NativeChangeBlockProperty(),
-            nativeChangeVariable: NativeChangeVariable()
-        )
         NativeblocksManager.getInstance().provideEventLogger(loggerType: "LOGGER", logger: AppLogger())
 
         Task {
