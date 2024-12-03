@@ -1,3 +1,11 @@
 .DS_Store
 .idea/
 ./idea/
+/.build
+/Packages
+/*.xcodeproj
+.swiftpm/
+xcuserdata/
+xcshareddata/
+docc_builder
+docc/
