@@ -8,6 +8,7 @@ import io.nativeblocks.core.api.NativeblocksError
 import io.nativeblocks.core.api.NativeblocksFrame
 import io.nativeblocks.core.api.NativeblocksLoading
 import io.nativeblocks.core.api.NativeblocksManager
+import io.nativeblocks.foundation.integration.consumer.block.FoundationBlockProvider
 import io.nativeblocks.sampleapp.integration.consumer.action.SampleActionProvider
 import io.nativeblocks.sampleapp.integration.consumer.block.SampleBlockProvider
 
@@ -33,10 +34,12 @@ class MainActivity : ComponentActivity() {
 
         SampleBlockProvider.provideBlocks()
         SampleActionProvider.provideActions(aiChatBot)
+        FoundationBlockProvider.provideBlocks()
 
         setContent {
             NativeblocksFrame(
                 frameRoute = "/",
+                routeArguments = hashMapOf(),
                 loading = {
                     NativeblocksLoading()
                 },
