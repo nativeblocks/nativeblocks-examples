@@ -8,17 +8,11 @@ import io.nativeblocks.core.api.NativeblocksError
 import io.nativeblocks.core.api.NativeblocksFrame
 import io.nativeblocks.core.api.NativeblocksLoading
 import io.nativeblocks.core.api.NativeblocksManager
-import io.nativeblocks.foundation.integration.consumer.block.FoundationBlockProvider
-import io.nativeblocks.sampleapp.integration.consumer.action.SampleActionProvider
+import io.nativeblocks.foundation.FoundationProvider
 import io.nativeblocks.sampleapp.integration.consumer.block.SampleBlockProvider
-
-private const val NATIVEBLOCKS_API_KEY = ""
-private const val NATIVEBLOCKS_API_URL = "https://edge.api.nativeblocks.io/gateway"
+import io.nativeblocks.wandkit.LiveKit
 
 class MainActivity : ComponentActivity() {
-
-    // it can provide with DI
-    private val aiChatBot = AIChatBot()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,15 +20,24 @@ class MainActivity : ComponentActivity() {
         NativeblocksManager.initialize(
             applicationContext = this,
             edition = NativeblocksEdition.Cloud(
-                endpoint = NATIVEBLOCKS_API_URL,
-                apiKey = NATIVEBLOCKS_API_KEY,
+                endpoint = "https://edge.api.nativeblocks.io/gateway",
+                apiKey = "",
                 developmentMode = true
             )
         )
 
+        NativeblocksManager.getInstance().setLocalization("EN")
+
+        FoundationProvider.provide()
         SampleBlockProvider.provideBlocks()
-        SampleActionProvider.provideActions(aiChatBot)
-        FoundationBlockProvider.provideBlocks()
+
+        NativeblocksManager.getInstance().wandKit(
+            LiveKit(
+                screenSharing = true,
+                keepScreenOn = true,
+                autoConnect = false
+            )
+        )
 
         setContent {
             NativeblocksFrame(
@@ -48,5 +51,10 @@ class MainActivity : ComponentActivity() {
                 },
             )
         }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        NativeblocksManager.getInstance().destroy()
     }
 }
